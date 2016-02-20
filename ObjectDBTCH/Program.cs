@@ -11,8 +11,11 @@ namespace ObjectDBTCH
     {
         static void Main(string[] args)
         {
-            Field pole = new Field("front","tyl");
-            Console.WriteLine(pole.Fld_foregrnd);
+            Field pole = new Field(1);
+            pole.Chng_check();
+            Console.WriteLine(pole.Value + ":" +pole.Check);
+            pole.Chng_check();
+            Console.WriteLine(pole.Check);
             Console.ReadKey();
         }
     }

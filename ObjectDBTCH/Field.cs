@@ -12,14 +12,19 @@ namespace field_space
         private object fld_foregrnd;
         private int value;
         private object state;
+        private bool check;
 
-        public Field(object back, object fore)
+        public Field(int _value,object back, object fore)
         {
             fld_foregrnd = fore;
             fld_backgrd = back;
+            check = false;
+            value = _value;
         }
-        public Field()
+        public Field(int _value)
         {
+            value = _value;
+            Check = false;
             // empty constructor
         }
         public object Fld_foregrnd
@@ -40,11 +45,6 @@ namespace field_space
             get
             {
                 return value;
-            }
-
-            set
-            {
-                this.value = value;
             }
         }
 
@@ -72,6 +72,24 @@ namespace field_space
             {
                 state = value;
             }
+        }
+
+        public bool Check
+        {
+            get
+            {
+                return check;
+            }
+
+            set
+            {
+                check = value;
+            }
+        }
+
+        public void Chng_check()
+        {
+            Check = !Check;
         }
     }
 }
