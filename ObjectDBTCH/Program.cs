@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using field_space;
 
 namespace ObjectDBTCH
 {
@@ -10,6 +11,9 @@ namespace ObjectDBTCH
     {
         static void Main(string[] args)
         {
+            Field pole = new Field("front","tyl");
+            Console.WriteLine(pole.Fld_foregrnd);
+            Console.ReadKey();
         }
     }
 }
