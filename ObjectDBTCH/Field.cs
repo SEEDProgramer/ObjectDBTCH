@@ -7,23 +7,23 @@ namespace field_space
 {
     public class Field
     {
-        private object fld_backgrd;
-        /// <remarks>field foregroud</remarks>
-        private object fld_foregrnd;
-        private int value;
-        private object state;
-        private bool check;
+        private object _fld_backgrd;
+        /// <remarks>field foregroud what is bacground of the field</remarks>
+        private object _fld_foregrnd;
+        private int _value;
+        private object _state;
+        private bool _check;
 
         public Field(int _value,object back, object fore)
         {
-            fld_foregrnd = fore;
-            fld_backgrd = back;
-            check = false;
-            value = _value;
+            _fld_foregrnd = fore;
+            _fld_backgrd = back;
+            _check = false;
+            this._value = _value;
         }
         public Field(int _value)
         {
-            value = _value;
+            this._value = _value;
             Check = false;
             // empty constructor
         }
@@ -31,12 +31,12 @@ namespace field_space
         {
             get
             {
-                return fld_foregrnd;
+                return _fld_foregrnd;
             }
 
             set
             {
-                fld_foregrnd = value;
+                _fld_foregrnd = value;
             }
         }
 
@@ -44,20 +44,22 @@ namespace field_space
         {
             get
             {
-                return value;
+                return _value;
             }
         }
-
+        /// <summary>
+        /// field background what is bacground of the field
+        /// </summary>
         public object Fld_backgrd
         {
             get
             {
-                return fld_backgrd;
+                return _fld_backgrd;
             }
 
             set
             {
-                fld_backgrd = value;
+                _fld_backgrd = value;
             }
         }
 
@@ -65,12 +67,12 @@ namespace field_space
         {
             get
             {
-                return state;
+                return _state;
             }
 
             set
             {
-                state = value;
+                _state = value;
             }
         }
 
@@ -78,12 +80,12 @@ namespace field_space
         {
             get
             {
-                return check;
+                return _check;
             }
 
             set
             {
-                check = value;
+                _check = value;
             }
         }
 
